@@ -1,9 +1,20 @@
 function isIsogram(text) {
-  // add each char to a set
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
-  // note: a set drops dup values
-  // thus, to see if all the chars were unique,
-  // check length of text and the size of the set 
+  if (text == "") return true
+
+  let letters = text.toLowerCase().split("");
+
+  let isogram = {};
+  let isogramEvaluator = true;
+  letters.forEach(letter => {
+    if (isogram[letter] === undefined) {
+      isogram[letter] = 1;
+    } else {
+      isogramEvaluator = false;
+      return 
+    }
+  });
+
+  return isogramEvaluator
 }
 
 console.log(isIsogram("Camile")) // => true
