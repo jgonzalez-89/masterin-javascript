@@ -5,5 +5,11 @@ let obj = {
 }
 function removeNumbersLessThan(num, obj) {
     // your code here
-    
+    for (const o in obj) {
+        if (obj[o] < num) {
+            delete obj[o];
+        }
+    }
+
+    return obj;
 }
