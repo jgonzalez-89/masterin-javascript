@@ -1,5 +1,11 @@
 function removeStringValuesLongerThan(num, obj) {
-  // your code here
+  for (const prop in obj) {
+      if (obj[prop].length > num) {
+          delete obj[prop];
+      }
+  }
+
+  return obj;
 }
 
 let obj = {
@@ -7,4 +13,5 @@ let obj = {
   age: 20,
   location: 'Texas',
 };
+
 removeStringValuesLongerThan(6, obj);

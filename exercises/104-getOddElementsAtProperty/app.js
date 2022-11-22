@@ -3,7 +3,13 @@ let obj = {
 };
 
 function getOddElementsAtProperty(obj, key) {
-    // your code here
+  // your code here
+  if (!obj[key] || !Array.isArray(obj[key]) || obj[key].length < 1) return []
+  else {
+    let aux = []
+    obj[key].map(item => item % 2 != 0 ? aux.push(item) : null)
+    return aux
+  }
 }
 
 let output = getOddElementsAtProperty(obj, 'key');

@@ -1,5 +1,8 @@
 function convertDoubleSpaceToSingle(str) {
     // your code here
+    let mipo = str.split('  ');
+    let mipospace = mipo.join(' ');
+    return mipospace;
     
 }
 let output = convertDoubleSpaceToSingle("string  with  double  spaces");
